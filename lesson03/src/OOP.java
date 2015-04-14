@@ -8,7 +8,6 @@ public class OOP {
 
 		//oopIntro();
 
-
 		Cat cat1 = new Cat("Jerry",2);
 		Cat cat2 = new Cat("Tom",2);
 		//Cat cat2 = cat1;
@@ -16,7 +15,6 @@ public class OOP {
 
 		System.out.println("they are equal :" + (cat1.equals(cat2)));
 		// how qeuals 2 methods
-
 
 	}
 
