@@ -2,6 +2,7 @@ package com.hillel.java.improveArray;
 
 /**
  * Created by Ramzes on 17.04.2015.
+ * связанный список
  */
 public class LinkedCells {
 	private Cell head;
@@ -10,10 +11,11 @@ public class LinkedCells {
 
 
 	public void add(String value) {
+		//  only first element
 		if (head == null) {
 			head = new Cell(value);
 		}
-
+		// first element is tail
 		if (tail == null) {
 			tail = head;
 		} else {
