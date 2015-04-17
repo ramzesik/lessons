@@ -1,3 +1,5 @@
+package com.hillel.java.javaintro;
+
 import java.util.AbstractCollection;
 import java.util.Arrays;
 

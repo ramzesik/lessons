@@ -1,3 +1,5 @@
+package com.hillel.java.oopBasics;
+
 import java.util.Arrays;
 
 /**
@@ -10,8 +12,11 @@ public class Vet {
 
 
 	public  void registerCat(Cat cat) {
-		vetList[registered] = cat;
-		registered++;
+		if (cat != null) {
+			//cat  = new Cat();
+			vetList[registered] = cat;
+			registered++;
+		}
 	}
 
 	public void print() {
@@ -21,7 +26,7 @@ public class Vet {
 	public void makeVaccine() {
 		for (int i = 0; i<registered; i++) {
 			Cat cat = vetList[i];
-			cat.acceptVaccine("SVG");
+			cat.acceptVaccine(Vaccine.ASDD);
 		}
 	}
 }
