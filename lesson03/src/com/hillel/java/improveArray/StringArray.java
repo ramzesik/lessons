@@ -1,21 +1,24 @@
 package com.hillel.java.improveArray;
 
 
+import com.hillel.java.oopBasics.OOP;
+
 import java.util.Arrays;
+import java.util.Objects;
 
 /**
  * Created by Ramzes on 17.04.2015.
  */
 public class StringArray {
 
-	private String[] array = new String[1];
+	private Object[] array = new Object[1];
 	private int counter = 0;
 
 
 	/**
 	 * @param value
 	 */
-	public void add(String value) {
+	public void add(Object value) {
 
 		if (array.length == counter) {
 			resize();
@@ -23,10 +26,9 @@ public class StringArray {
 		array[counter] = value;
 		counter++;
 
-
 	}
 
-	public String get(int index) {
+	public Object get(int index) {
 		if (index >= counter) {
 			throw new IndexOutOfBoundsException("index:" + index + ", size:" + counter);
 		}
