@@ -4,12 +4,13 @@ package com.hillel.java.improveArray;
 import com.hillel.java.oopBasics.OOP;
 
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.Objects;
 
 /**
  * Created by Ramzes on 17.04.2015.
  */
-public class StringArray {
+public class StringArray implements Iterable {
 
 	private Object[] array = new Object[1];
 	private int counter = 0;
@@ -77,4 +78,8 @@ public class StringArray {
 
 	}
 
+	@Override
+	public Iterator iterator() {
+		return new ArrayIterator(this);
+	}
 }

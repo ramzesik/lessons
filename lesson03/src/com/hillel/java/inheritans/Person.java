@@ -2,10 +2,12 @@ package com.hillel.java.inheritans;
 
 import com.hillel.java.improveArray.StringArray;
 
+import java.util.Objects;
+
 /**
  * Created by Ramzes on 22.04.2015.
  */
-public class Person {
+public class Person extends Object {
 
 
     private String name;
