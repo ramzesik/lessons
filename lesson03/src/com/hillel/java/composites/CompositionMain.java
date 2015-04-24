@@ -10,9 +10,9 @@ public class CompositionMain {
 
 
         employee.departamen = "IT";
+        employee.getName();
 
-
-        Person m = employee;
+        Nameble p = employee;
 
 
     }
