@@ -9,6 +9,8 @@ public class Person {
 
 
     private String name;
+    public String field = "Person's field";
+
 // default constructor
     public Person() {
         // метод коорый java выполянет при ините класса, вызов конструктора парента
@@ -24,6 +26,13 @@ public class Person {
     public void setName(String name) {
 
         this.name = name;
+    }
+
+    public String someMethod() {
+        return "Person's method. Method see: {field: " + field + ", static method: " + staticMethod() + "}";
+    }
+    public static String staticMethod() {
+        return "Person's static method";
     }
 
     public String getName() {

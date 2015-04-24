@@ -17,23 +17,47 @@ public class InheritancesMain {
 
     public static void main(String[] args) {
 
-         Person persone = new Employee("Ivan","IT");
+        // Person persone = new Employee("Ivan","IT");
 
-        register(persone);
+        //register(persone);
 
        // register(new Employee("Ivan","IT"));
        // register(new Person("Vasya"));
 
         //jenerics();
 
+        polymorphismVsFieldsAndStaticMethods();
+    }
+
+
+    private static void polymorphismVsFieldsAndStaticMethods() {
+       /* Person purePerson = new Person("Ivan");
+        System.out.println("Person object as Person:\n" +
+                "   method: {" + purePerson.someMethod() + "} \n" +
+                "   out of class field: {" + purePerson.field + "} \n" +
+                "   out of class static method: {" + purePerson.staticMethod() + "} \n");
+
+        */Employee pureEmployee = new Employee("Ivan", "T");/*
+        System.out.println("Employee object as Employee:\n" +
+                "   method: {" + pureEmployee.someMethod() + "} \n" +
+                "   out of class field: {" + pureEmployee.field + "} \n" +
+                "   out of class static method: {" + pureEmployee.staticMethod() + "}\n");
+*/
+        Person employeeCastedToPerson = pureEmployee;
+        System.out.println("Employee object casted to Person:\n" +
+                "   polymorphyc method: {" + employeeCastedToPerson.someMethod() + "} \n" +
+                "   out of class field: {" + employeeCastedToPerson.field + "} \n" +
+                "   out of class static method: {" + employeeCastedToPerson.staticMethod() + "}\n");
 
     }
+
+
 
     public static void jenerics() {
         //jeneric расказывает ArrayList с каким объктом работаем
         // ArrayList<Employee> list = new ArrayList<Employee>();
         ArrayList<Person> list = new ArrayList<>();
-        list.add(new Employee("ivan","IT"));
+        list.add(new Employee("ivan", "IT"));
         list.add(new Person("Ivann"));
 
         Employee employee = (Employee) list.get(0);

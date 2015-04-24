@@ -7,6 +7,8 @@ public class Employee extends Person {
 
     private  String departament;
 
+    public String field = "Eployee's field";
+
     public Employee() {
         // метод коорый java выполянет при ините класса, вызов конструктора парента
         // java сама его вызывает
@@ -19,6 +21,15 @@ public class Employee extends Person {
         super(name);
         this.departament=departament;
 
+    }
+
+    @Override
+    public String someMethod() {
+        return "Employee's overridden method. Method see: {field: " + field + ", static method: " + staticMethod() + "}";
+    }
+
+    public static String staticMethod() {
+        return "Employee's static method";
     }
 
     public String getDepartament() {
