@@ -7,7 +7,7 @@ import java.util.Objects;
 /**
  * Created by Ramzes on 22.04.2015.
  */
-public class Person extends Object {
+public class Person extends Object implements Comparable<Person> {
 
 
     private String name;
@@ -19,6 +19,7 @@ public class Person extends Object {
         super();
         System.out.println("Creating Persone");
     }
+
 
     public Person(String name) {
         this.name = name;
@@ -41,4 +42,15 @@ public class Person extends Object {
         return name;
     }
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        return this.name.compareTo(o.name);
+    }
 }

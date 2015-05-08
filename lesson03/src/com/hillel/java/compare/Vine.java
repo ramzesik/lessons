@@ -16,6 +16,7 @@ public class Vine implements  Comparable<Vine> {
     }
 
 
+    // контракт использует и equals and compareTo in  TreeSet
 
     @Override
     public boolean equals(Object obj) {
@@ -33,13 +34,16 @@ public class Vine implements  Comparable<Vine> {
 
         // можем обратиться к приватной только есил мы ее вызвали из самого класса
         Vine other = (Vine) obj;
-        return  other.year==this.year;
+        return  other.year==this.year && this.price == other.price;
         
     }
     @Override
     public int compareTo(Vine bottle2) {
-
-        return this.year - bottle2.year;
+        int result = this.year - bottle2.year;
+        if (result==0) {
+            result = this.price-bottle2.price;
+        }
+        return result;
 
     }
 
@@ -50,5 +54,13 @@ public class Vine implements  Comparable<Vine> {
 
     public int getPrice() {
         return price;
+    }
+
+    public String taste() {
+        return "Nothig spesial";
+    }
+
+    public int getYear() {
+        return year;
     }
 }
