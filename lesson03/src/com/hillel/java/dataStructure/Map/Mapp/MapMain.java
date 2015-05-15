@@ -1,11 +1,8 @@
-package com.hillel.java.dataStructure.Map;
+package com.hillel.java.dataStructure.Map.Mapp;
 
 import com.hillel.java.inheritans.Person;
 
-import java.util.Collection;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
+import java.util.*;
 
 /**
  * Created by Ramzes on 08.05.2015.
